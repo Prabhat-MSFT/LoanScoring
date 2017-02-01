@@ -3,7 +3,7 @@ library(mrsdeploy)
 help(mrsdeploy)
 
 # Read from csv file and create your model
-loans <- read.csv("C:/Users/azureuser/Documents/TechReady/LoanScoring/LoanStats.csv")
+loans <- read.csv("https://raw.githubusercontent.com/Prabhat-MSFT/LoanScoring/master/Data/SampleLoanData.csv")
 head(loans, 5)
 
 # Train the model
