@@ -5,7 +5,7 @@ library(reshape2)
 library(ggplot2)
 
 # creating output directory
-mainDir <- 'C:/Users/azureuser/Documents/TechReady/LoanScoring' 
+mainDir <- 'https://raw.githubusercontent.com/Prabhat-MSFT/LoanScoring/master/Data/SampleLoanData.csv' 
 dir.create(mainDir, recursive = TRUE, showWarnings = FALSE)  
 setwd(mainDir);  
 print("Creating output plot files:", quote=FALSE)  
