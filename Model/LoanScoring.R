@@ -19,8 +19,8 @@ loanPredictService <- function(revol_util, int_rate, loan_amnt, mths_since_last_
   loanScore <- prediction$is_bad_Pred 
 }
 remoteLogout()
-remoteLogin("http://40.86.94.151:12800", session = TRUE, diff = TRUE, commandline =  TRUE, 
-            prompt = "REMOTE_TECHREADY>>>", username = "admin", password = "Audi@2015")
+remoteLogin("http://[RSERVERIP]:12800", session = TRUE, diff = TRUE, commandline =  TRUE, 
+            prompt = "REMOTE_TECHREADY>>>", username = "", password = "")
 
 pause()
 
