@@ -5,7 +5,7 @@ library(reshape2)
 library(ggplot2)
 
 # creating output directory
-mainDir <- 'https://raw.githubusercontent.com/Prabhat-MSFT/LoanScoring/master/Data/SampleLoanData.csv' 
+mainDir <- '[SET OUTPUT DIRECTORY]' 
 dir.create(mainDir, recursive = TRUE, showWarnings = FALSE)  
 setwd(mainDir);  
 print("Creating output plot files:", quote=FALSE)  
@@ -19,7 +19,7 @@ print(dest_filename, quote=FALSE);
 jpeg(filename=dest_filename, height=3900, width = 6400, res=300); 
 
 #filtering numeric columns
-loans <- read.csv("C:/Users/azureuser/Documents/TechReady/LoanScoring/LoanStatsSampleData.csv")
+loans <- read.csv("https://raw.githubusercontent.com/Prabhat-MSFT/LoanScoring/master/Data/SampleLoanData.csv")
 numeric_cols <- sapply(loans, is.numeric)
 
 numeric_cols
