@@ -24,8 +24,6 @@ remoteLogin("http://40.86.94.151:12800", session = TRUE, diff = TRUE, commandlin
 
 pause()
 
-# pseudo `unique` service name so no collision in example
-service_name <- paste0("loanPredictService", round(as.numeric(Sys.time()), 0))
 service_name <- "loanPredictService1484942117"
 
 # Publish service
@@ -57,15 +55,3 @@ cat(api$swagger(), file = "C:/Users/azureuser/Documents/TechReady/LoanScoring/lo
 cap <- api$capabilities()
 cap
 cap$swagger
-
-status <- deleteService(cap$name, cap$version)
-status
-
-services <- listServices(service_name)
-length(services) # gone
-
-# Error: No service found for `service_name` version "v1.0.0"
-api <- getService(service_name, "v2.0.0")
-
-#Logout
-remoteLogout()
