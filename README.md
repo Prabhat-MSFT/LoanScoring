@@ -1,4 +1,4 @@
-# LoanScoring
+  # LoanScoring
 Demo of Loan Scoring App - Includes models from sample loan scoring data base and a Visual studio solution
 
 STEPS to use the code sample - 
@@ -15,9 +15,10 @@ remoteLogin("http://[RSERVER IP]:12800", session = TRUE, diff = TRUE, commandlin
 
 5) Connect VS to this github repository to pull the code locally. Update the web.config to have correct web node URL:Port, User name and Password.
 
-<add key="WebNodeAddress" value="http://IPADDRESS:PORT"/>
-<add key="WebNodeUserName" value="USERNAME"/>
-<add key="WebNodePassword" value="PASSWORD"/>
+  <add key="WebNodeAddress" value="http://IPADDRESS:PORT"/>
+  <add key="WebNodeUserName" value="USERNAME"/>
+  <add key="WebNodePassword" value="PASSWORD"/>
+
 Build and run.
 
 6) Alternatively you can regenerate the client code via AUTOREST from the created SWAGGER document - please review the instructions here https://msdn.microsoft.com/en-us/microsoft-r/operationalize/app-developer-get-started. You can update the generated client code in the VS solution for any update.
