@@ -15,9 +15,9 @@ remoteLogin("http://[RSERVER IP]:12800", session = TRUE, diff = TRUE, commandlin
 
 5) Connect VS to this github repository to pull the code locally. Update the web.config to have correct web node URL:Port, User name and Password.
 
-  <add key="WebNodeAddress" value="http://IPADDRESS:PORT"/>
-  <add key="WebNodeUserName" value="USERNAME"/>
-  <add key="WebNodePassword" value="PASSWORD"/>
+    <add key="WebNodeAddress" value="http://IPADDRESS:PORT"/>
+    <add key="WebNodeUserName" value="USERNAME"/>
+    <add key="WebNodePassword" value="PASSWORD"/>
 
 Build and run.
 
