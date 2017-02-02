@@ -6,7 +6,8 @@ STEPS to use the code sample -
 1) Configure one box operationalization set up of R Server using https://msdn.microsoft.com/en-us/microsoft-r/operationalize/configuration-initial. One box set up is simpler, though you can also try the enterprise set up.
 
 2) use the IP of web node with port or the virual IP (in case of Load balancer) to update remote login credentials in Model/LoanScoring.R file. 
-      remoteLogin("http://[RSERVER IP]:12800", session = TRUE, diff = TRUE, commandline =  TRUE, prompt = "REMOTE_TECHREADY>>>", username       =     "", password = "")
+
+remoteLogin("http://[RSERVER IP]:12800", session = TRUE, diff = TRUE, commandline =  TRUE, prompt = "REMOTE_TECHREADY>>>", username       =     "", password = "")
 
 3) Update SWAGGER_FILE_PATH token in Model/LoanScoring.R to store SWAGGER DOC in a local file system. SWAGGER document relevant to the solution is checked-in at the top level of the file as LoanPredict.json
 
