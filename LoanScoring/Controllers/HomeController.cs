@@ -86,8 +86,13 @@ namespace LoanScoring.Controllers
 
         private LoanPredictService1484942117 GetAuthenticatedClient()
         {
-            var client = new LoanPredictService1484942117(new Uri("http://40.86.94.151:12800"));
-            var loginRequest = new LoginRequest("admin", "Audi@2015");
+            var client = new LoanPredictService1484942117(new Uri(ConfigurationManager.AppSettings["WebNodeAddress"]));
+
+            var loginRequest = new LoginRequest(
+               ConfigurationManager.AppSettings["WebNodeUserName"],
+               ConfigurationManager.AppSettings["WebNodePassword"]
+               );
+
             var loginResponse = client.Login(loginRequest);
             var headers = client.HttpClient.DefaultRequestHeaders;
             var accessToken = loginResponse.AccessToken;
